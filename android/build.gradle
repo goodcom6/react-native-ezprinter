@@ -11,6 +11,8 @@ buildscript {
 apply plugin: 'com.android.library'
 
 android {
+    namespace 'com.goodcom.react.EzPrinter'
+	
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
 
