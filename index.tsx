@@ -137,5 +137,23 @@ type EzPrinterType = {
     align: AlignmentType,
     isAutoFeed: Boolean,
   ) => void;
+  /**
+  * Open the cash box,it will be opened once when called.
+  */
+  openCashBox:()=>void;
+  /**
+  * Show bitmap in customer display LCD (image using base64 encoding), The maximum size is 240 * 320.
+  * Images smaller than the customer display screen will be displayed in the center.
+  */
+  showLcdBitmapByBase64:(
+    base64: string
+  ) => void;
+  /**
+  * Show bitmap in customer display LCD (image using byteArray), The maximum size is 240 * 320.
+  * Images smaller than the customer display screen will be displayed in the center.
+  */
+  showLcdBitmapByArray:(
+    byteArray: number[]
+  ) => void;
 };
 export default EzPrinter as EzPrinterType;

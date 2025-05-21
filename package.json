@@ -1,7 +1,7 @@
 {
   "name": "react-native-ezprinter",
-  "version": "1.0.3",
-  "description": "Goodcom Printer for React-Native",
+  "version": "1.0.6",
+  "description": "Goodcom Printer sdk for react-native(TypeScript)",
   "author": "CoolBi <goodcompos@gmail.com>",
   "contributors": [],
   "private": false,
