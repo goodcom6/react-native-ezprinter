@@ -116,6 +116,24 @@ public class EzPrinterModule extends ReactContextBaseJavaModule {
     public void printJson(String json) {
         GcPrinterHelper.getInstance().printJson(reactContext, json);
     }
-
+    @ReactMethod
+    public void openCashBox(){
+        GcPrinterHelper.getInstance().openCashBox(reactContext);
+    }
+    @ReactMethod
+    public void showLcdBitmapByBase64(String base64){
+        byte[] decodedBytes = Base64.decode(base64.split(",")[1], Base64.DEFAULT);
+        Bitmap bitmap = BitmapFactory.decodeByteArray(decodedBytes, 0, decodedBytes.length);
+        GcPrinterHelper.getInstance().showLcdBitmap(reactContext,bitmap);
+    }
+    @ReactMethod
+    public void showLcdBitmapByArray(ReadableArray byteArray){
+        byte[] bytes = new byte[byteArray.size()];
+        for (int i = 0; i < byteArray.size(); i++) {
+            bytes[i] = (byte) byteArray.getInt(i);
+        }
+        Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+        GcPrinterHelper.getInstance().showLcdBitmap(reactContext,bitmap);
+    }
 
 }
