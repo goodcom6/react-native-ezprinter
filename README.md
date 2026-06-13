@@ -2,7 +2,7 @@
 This demo demonstrates how to use the react-native-ezprinter SDK to print receipts. The react-native-ezprinter SDK supports Goodcom POS printers(Printing devices can be viewed [here](https://www.igoodcom.com/)).
 <p float="left">
   <img src="images/app.png" width="30%" />
-  <img src="images/ticket.png" width="30%" />
+  <img src="images/ticket.png" width="25%" />
 </p>
 This is a [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
