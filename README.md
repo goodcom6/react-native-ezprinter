@@ -143,7 +143,7 @@ BarcodeType : Barcode Type
   /**
    * Print the HTML content; if it contains CSS, it needs to be included in this string.
    */
-  printHtml: (json) => void,
+  printHtml: (html) => void,
   /**
    * Printing an image using base64 encoding, the Base64 string must start with "data:image/png;base64,"
    * You can set the alignment position of the printed image, and decide whether to automatically feed the paper after printing.
