@@ -1,4 +1,10 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+
+This demo demonstrates how to use the react-native-ezprinter SDK to print receipts. The react-native-ezprinter SDK supports Goodcom POS printers(Printing devices can be viewed [here](https://www.igoodcom.com/)).
+<p float="left">
+  <img src="images/DemoUi.png" width="30%" />
+  <img src="images/Receipt.png" width="50%" />
+</p>
+This is a [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started
 
@@ -72,6 +78,7 @@ BarcodeType : Barcode Type
 | drawQrCodeWithHeight   |string,align,height                                       | void              |
 | isDeviceSupport        |                                                          | `Promise<number>` |
 | printJson              |json                                                      | void              |
+| printHtml              |html                                                      | void              |
 | printImageByBase64     |base64, align, isAutoFeed                                 | void              |
 | printImageByArray      |byteArray, align, isAutoFeed                              | void              |
 
@@ -133,6 +140,10 @@ BarcodeType : Barcode Type
    * Print the content in json format, which will be parsed by the printer according to the template and formatted for printing
    */
   printJson: (json) => void,
+  /**
+   * Print the HTML content; if it contains CSS, it needs to be included in this string.
+   */
+  printHtml: (json) => void,
   /**
    * Printing an image using base64 encoding, the Base64 string must start with "data:image/png;base64,"
    * You can set the alignment position of the printed image, and decide whether to automatically feed the paper after printing.
